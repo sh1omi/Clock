@@ -1,0 +1,1 @@
+(function(a){a(document).ready(function(){if(!device.tablet()&&!device.mobile()){a(".player").mb_YTPlayer()}else{a(".big-background, .small-background-section").addClass("big-background-default-image")}})})(jQuery);

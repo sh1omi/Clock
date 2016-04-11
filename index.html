@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Digital Clock</title>
+    <meta name="author" content="Sam Norton">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/normalize.css" media="all">
+    <link rel="stylesheet" href="css/style.css" media="all">
+   	<link href='https://fonts.googleapis.com/css?family=Open+Sans:800italic' rel='stylesheet' type='text/css'>
+ <meta name="robots" content="noindex,follow" />
+</head>
+
+<body onload="Clock()">
+
+    <section class="big-background">
+        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=nam90gorcPs',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}"></a>
+        
+        <div class="pattern"></div> 
+            <div class="big-background-container">
+                <h1 id="time">00:00:00</h1>
+                <h1 id="date">11/04/2016</h1>
+            </div>                                                    
+    </section>
+</div>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/device.min.js"></script> <!--OPTIONAL JQUERY PLUGIN-->
+<script src="js/jquery.mb.YTPlayer.js"></script>
+<script src="js/custom.js"></script>
+<script>
+$(document).ready(function(){function a(){var d=new Date();var b=d.getHours();var c=d.getMinutes();var e=d.getSeconds();if(b<10){b="0"+b}if(c<10){c="0"+c}if(e<10){e="0"+e}document.getElementById("time").innerText=b+":"+c+":"+e;document.getElementById("date").innerText=d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();document.title=b+":"+c+":"+e}a();setInterval(a,1000)});
+</script>
+</body>
+</html>
